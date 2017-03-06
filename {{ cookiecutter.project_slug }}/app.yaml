@@ -1,0 +1,33 @@
+application: {{ cookiecutter.project_slug }}
+version: dev
+runtime: python27
+api_version: 1
+threadsafe: true
+
+
+builtins:
+
+  - deferred: on
+
+
+handlers:
+
+  - url: {{ cookiecutter.static_url }}
+    static_dir: {{ cookiecutter.static_dir }}
+
+  - url: /.*
+    script: {{ cookiecutter.pkg_name }}.wsgi.app
+
+
+skip_files:
+  - ^(.*/)?.*\.(egg|dist)-info/
+  - ^(.*/)?.*\.scss$
+  - ^node_modules/
+  - ^[^/.]\.(sh|txt|md)$
+
+  # Defaults.
+  - ^(.*/)?#.*#$
+  - ^(.*/)?.*~$
+  - ^(.*/)?.*\.py[co]$
+  - ^(.*/)?.*/RCS/.*$
+  - ^(.*/)?\..*$

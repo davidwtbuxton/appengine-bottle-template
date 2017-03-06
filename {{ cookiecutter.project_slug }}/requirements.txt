@@ -1,0 +1,4 @@
+bottle
+jinja2
+# Jinja2 requires setuptools for the PackageLoader.
+setuptools

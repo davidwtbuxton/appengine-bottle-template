@@ -1,0 +1,5 @@
+cron:
+
+  # - description: Example cron task
+  #   url: /tasks/cron
+  #   schedule: every 24 hours

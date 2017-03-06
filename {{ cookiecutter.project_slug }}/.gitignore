@@ -1,0 +1,4 @@
+*.py[cod]
+/libs/
+/node_modules/
+/{{ cookiecutter.static_dir }}/main.{js,css}

@@ -1,0 +1,10 @@
+{
+    "project_name": "Example",
+    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "pkg_name": "{{ cookiecutter.project_slug|replace('-', '') }}",
+    "static_dir": "static",
+    "static_url": "/{{ cookiecutter.static_dir }}/",
+    "_copy_without_render": [
+        "templates/*"
+    ]
+}

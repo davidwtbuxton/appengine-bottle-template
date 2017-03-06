@@ -1,0 +1,20 @@
+{
+	"name": "{{ cookiecutter.project_name }}",
+	"version": "1.0.0",
+	"description": "",
+	"license": "MIT",
+	"dependencies": {
+		"bulma": "~0.1.2",
+		"font-awesome": "~4.6.3",
+		"jquery": "~3.1.1"
+	},
+	"devDependencies": {
+		"node-sass": "~3.9.3",
+		"uglify-js": "~2.7.4"
+	},
+	"scripts": {
+		"build": "node-sass --include-path node_modules/bulma --include-path node_modules/font-awesome/scss static/src/main.scss static/main.css",
+		"watch": "node-sass --include-path node_modules/bulma --include-path node_modules/font-awesome/scss --watch static/src/main.scss static/main.css",
+		"uglify": "uglifyjs static/src/jquery/dist/jquery.min.js static/src/main.js -o static/main.js"
+	}
+}
